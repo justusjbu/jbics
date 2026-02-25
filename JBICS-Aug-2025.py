@@ -1,10 +1,10 @@
 import streamlit as st
-from langchain-community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain-text-splitters.TextSplitter import RecursiveCharacterTextSplitter
-from langchain-community.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA
-from langchain-openai import OpenAI
-from langchain-openai import OpenAIEmbeddings
+from langchain_openai import OpenAI
+from langchain_openai import OpenAIEmbeddings
 from PIL import Image
 import time
 
@@ -81,5 +81,6 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
