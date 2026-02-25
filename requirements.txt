@@ -2,7 +2,8 @@ langchain-community
 langchain
 langchain-openai
 streamlit
-langchain-text-splitters
+langchain_text_splitters
+
 
 
 
