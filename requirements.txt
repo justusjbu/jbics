@@ -4,6 +4,8 @@ langchain-openai
 streamlit
 langchain-classic
 pypdf
+chromadb
+
 
 
 
