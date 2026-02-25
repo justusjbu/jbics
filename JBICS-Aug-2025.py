@@ -36,7 +36,7 @@ texts = text_splitter.split_documents(documents)
 
 
 #print(texts)
-openai_api_key = "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"
+openai_api_key = ""
 embeddings = OpenAIEmbeddings(api_key=openai_api_key)
 db = Chroma.from_documents(texts, embeddings)
 
@@ -81,6 +81,7 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
 
