@@ -1,3 +1,10 @@
+langchain_community.document_loaders
+langchain.text_splitter
+langchain_community.vectorstores
+langchain.chains
+langchain_openai
+langchain_openai
+PIL
 PyPDFLoader
 RecursiveCharacterTextSplitter
 Chroma
