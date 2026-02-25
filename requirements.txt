@@ -1,0 +1,8 @@
+PyPDFLoader
+RecursiveCharacterTextSplitter
+Chroma
+RetrievalQA
+OpenAI
+OpenAIEmbeddings
+Image
+time
