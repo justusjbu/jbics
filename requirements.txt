@@ -3,6 +3,7 @@ langchain
 langchain-openai
 streamlit
 langchain-classic
+pypdf
 
 
 
