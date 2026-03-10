@@ -16,7 +16,7 @@ load_dotenv()
 
 # Access variables
 #OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-api_key = st.secrets["OPENAI_API_KEY"]
+api_key1 = st.secrets["OPENAI_API_KEY"]
 
 
 def type_message(message, placeholder):
@@ -48,7 +48,7 @@ texts = text_splitter.split_documents(documents)
 
 #print(texts)
 
-embeddings = OpenAIEmbeddings(api_key=api_key)
+embeddings = OpenAIEmbeddings(api_key=api_key1)
 db = Chroma.from_documents(texts, embeddings)
 
 if "messages" not in st.session_state:
@@ -92,6 +92,7 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
 
