@@ -5,6 +5,7 @@ streamlit
 langchain-classic
 pypdf
 chromadb
+python-dotenv
 
 
 
