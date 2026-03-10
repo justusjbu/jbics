@@ -8,6 +8,15 @@ from langchain_openai import OpenAIEmbeddings
 from PIL import Image
 import time
 
+import os
+from dotenv import load_dotenv
+
+# Load .env file (only needed locally; hosted platforms inject vars automatically)
+load_dotenv()
+
+# Access variables
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 def type_message(message, placeholder):
     """Display message with typing animation."""
     displayed_message = ""
@@ -81,6 +90,7 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
 
