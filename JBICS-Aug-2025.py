@@ -16,7 +16,7 @@ load_dotenv()
 
 # Access variables
 api_key1 = os.getenv("OPENAI_API_KEY")
-api_key2 = st.secrets["OPENAI_API_KEY"]
+#api_key2 = st.secrets["OPENAI_API_KEY"]
 
 
 def type_message(message, placeholder):
@@ -92,6 +92,7 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
 
