@@ -6,7 +6,7 @@ langchain-classic
 pypdf
 chromadb
 python-dotenv
-langchain langchain-openai
+
 
 
 
