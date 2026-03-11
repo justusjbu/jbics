@@ -25,12 +25,12 @@ api_key1 = st.secrets["OPENAI_API_KEY"]
 def type_message(message, placeholder):
     """Display message with typing animation."""
     displayed_message = ""
-    #for i in range(0, len(message), 2):
-     #   next_chars = message[i : i + 2]
-      #  displayed_message += next_chars
-       # placeholder.markdown(displayed_message + "▌")
-        #time.sleep(0.01)  # Adjust speed here (lower = faster)
-    placeholder.markdown(message)
+    for i in range(0, len(message), 2):
+        next_chars = message[i : i + 1]
+        displayed_message += next_chars
+        placeholder.markdown(displayed_message + "▌")
+        time.sleep(0.01)  # Adjust speed here (lower = faster)
+    placeholder.markdown(displayed_message)
 
 image = Image.open('JBU-Letter-Logo.png')
 
@@ -99,6 +99,7 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
 
