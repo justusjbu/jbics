@@ -9,7 +9,7 @@ from PIL import Image
 import time
 from openai import OpenAI
 from langchain_openai import ChatOpenAI
-from langchain.chains import RetrievalQA
+#from langchain.chains import RetrievalQA
 
 import os
 from dotenv import load_dotenv
@@ -99,6 +99,7 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
 
