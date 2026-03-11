@@ -6,7 +6,9 @@ langchain-classic
 pypdf
 chromadb
 python-dotenv
--U langchain langchain-openai
+langchain langchain-openai
+--upgrade pip
+
 
 
 
