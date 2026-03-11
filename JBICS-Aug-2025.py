@@ -8,6 +8,8 @@ from langchain_openai import OpenAIEmbeddings
 from PIL import Image
 import time
 from openai import OpenAI
+from langchain_openai import ChatOpenAI
+from langchain.chains import RetrievalQA
 
 import os
 from dotenv import load_dotenv
@@ -76,13 +78,17 @@ if user_input := st.chat_input("Ask a Question about JBU?"):
 
 #user_question = st.text_input("Please type your question here:", key="question")
 
+llm1= ChatOpenAI(
+    model="gpt-4.1-mini",
+    api_key=api_key1
+)
 
 if user_input and user_input !="":
 
-    qa = RetrievalQA.from_chain_type(llm=OpenAI(api_key=api_key1), chain_type="stuff", retriever=db.as_retriever())
+    qa = RetrievalQA.from_chain_type(llm=llm1, chain_type="stuff", retriever=db.as_retriever())
 
     query = user_input
-    result = qa.run(query)
+    result = qa.invoke(query)
     #   st.write(result)
 
     # Get and display assistant response with typing animation
@@ -93,6 +99,7 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
 
