@@ -25,7 +25,7 @@ api_key1 = st.secrets["OPENAI_API_KEY"]
 def type_message(message, placeholder):
     """Display message with typing animation."""
     displayed_message = ""
-    for i in range(0, len(message), 2):
+    for i in range(0, len(message), 1):
         next_chars = message[i : i + 1]
         displayed_message += next_chars
         placeholder.markdown(displayed_message + "▌")
@@ -99,6 +99,7 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
 
