@@ -79,7 +79,7 @@ if user_input := st.chat_input("Ask a Question about JBU?"):
 
 if user_input and user_input !="":
 
-    qa = RetrievalQA.from_chain_type(llm=OpenAI(api_key=openai_api_key), chain_type="stuff", retriever=db.as_retriever())
+    qa = RetrievalQA.from_chain_type(llm=OpenAI(api_key=api_key1), chain_type="stuff", retriever=db.as_retriever())
 
     query = user_input
     result = qa.run(query)
@@ -93,6 +93,7 @@ if user_input and user_input !="":
             st.session_state.messages.append(
                 {"role": "assistant", "content": result}
             )
+
 
 
 
